@@ -1,3 +1,4 @@
 packages:
   - smart-contracts
   - rsvp-subgraph
+  - frontend
