@@ -13,7 +13,7 @@ type Event @entity {
   totalRSVPs: BigInt!
   totalConfirmedAttendees: BigInt!
   rsvps: [RSVP!] @derivedFrom(field: "event")
-  confirmedAttendees: [Confirmation!] @derivedFrom(feild: "event")
+  confirmedAttendees: [Confirmation!] @derivedFrom(field: "event")
 }
 
 type Account @entity {
