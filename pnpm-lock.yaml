@@ -9,10 +9,12 @@ importers:
     specifiers:
       '@graphprotocol/graph-cli': 0.33.0
       '@graphprotocol/graph-ts': 0.27.0
+      '@protofire/subgraph-toolkit': ^0.1.2
       matchstick-as: 0.5.0
     dependencies:
       '@graphprotocol/graph-cli': 0.33.0
       '@graphprotocol/graph-ts': 0.27.0
+      '@protofire/subgraph-toolkit': 0.1.2_33zudjbxg5bobbzbvpmqt5p624
     devDependencies:
       matchstick-as: 0.5.0
 
@@ -675,6 +677,27 @@ packages:
     transitivePeerDependencies:
       - supports-color
     dev: true
+
+  /@protofire/subgraph-prettier-config/0.1.1_33zudjbxg5bobbzbvpmqt5p624:
+    resolution: {integrity: sha512-XJNXRYotEcywkCMsUMsbpzbC5xZUwQGwdk2NS+NNMhwNhm24i3SSO2dqJgnWYscmBGwpVZJTGVYK6f8g/Gn16g==}
+    peerDependencies:
+      '@graphprotocol/graph-ts': '>=0.12.0'
+      prettier: '>=1.17.0'
+    dependencies:
+      '@graphprotocol/graph-ts': 0.27.0
+      prettier: 2.7.1
+    dev: false
+
+  /@protofire/subgraph-toolkit/0.1.2_33zudjbxg5bobbzbvpmqt5p624:
+    resolution: {integrity: sha512-OyXa44LDjG766izmTLkkamfqw1tJbnQZTFL2/5S/0WbyhSxaPyO7xO+748dTvgdmlx2OWib5K7f7FcB2RtjZGQ==}
+    peerDependencies:
+      '@graphprotocol/graph-ts': '>=0.20.0'
+    dependencies:
+      '@graphprotocol/graph-ts': 0.27.0
+      '@protofire/subgraph-prettier-config': 0.1.1_33zudjbxg5bobbzbvpmqt5p624
+    transitivePeerDependencies:
+      - prettier
+    dev: false
 
   /@scure/base/1.1.1:
     resolution: {integrity: sha512-ZxOhsSyxYwLJj3pLZCefNitxsj093tb2vq90mp2txoYeBqbcjDjqFhyM8eUjq/uFm6zJ+mUuqxlS2FkuSY1MTA==}
@@ -1339,7 +1362,7 @@ packages:
   /axios/0.21.4_debug@4.3.1:
     resolution: {integrity: sha512-ut5vewkiu8jjGBdqpM44XxjuCjq9LAKeHVmoVfHVzy8eHgxxq8SbAVQNovDA8mVi05kP0Ea/n/UzcSHcTJQfNg==}
     dependencies:
-      follow-redirects: 1.15.1_debug@4.3.4
+      follow-redirects: 1.15.1_debug@4.3.1
     transitivePeerDependencies:
       - debug
     dev: false
@@ -2953,6 +2976,18 @@ packages:
     resolution: {integrity: sha512-OuR+o7kHVe+x9RtIujPay7Uw3bvDZBZFSBXClEphZuSDLmZTqMdclasf4vFSsogC8baDz0eaC2NdO/2dlXHBKQ==}
     dev: false
 
+  /follow-redirects/1.15.1_debug@4.3.1:
+    resolution: {integrity: sha512-yLAMQs+k0b2m7cVxpS1VKJVvoz7SS9Td1zss3XRwXj+ZDH00RJgnuLx7E44wx02kQLrdM3aOOy+FpzS7+8OizA==}
+    engines: {node: '>=4.0'}
+    peerDependencies:
+      debug: '*'
+    peerDependenciesMeta:
+      debug:
+        optional: true
+    dependencies:
+      debug: 4.3.1
+    dev: false
+
   /follow-redirects/1.15.1_debug@4.3.4:
     resolution: {integrity: sha512-yLAMQs+k0b2m7cVxpS1VKJVvoz7SS9Td1zss3XRwXj+ZDH00RJgnuLx7E44wx02kQLrdM3aOOy+FpzS7+8OizA==}
     engines: {node: '>=4.0'}
@@ -2963,6 +2998,7 @@ packages:
         optional: true
     dependencies:
       debug: 4.3.4
+    dev: true
 
   /for-each/0.3.3:
     resolution: {integrity: sha512-jqYfLp7mo9vIyQf8ykW2v7A+2N4QjeCeI5+Dz9XraiO1ign81wjiH7Fb9vSOWvQfNtmSa4H2RoQTrrXivdUZmw==}
@@ -3245,6 +3281,7 @@ packages:
       minimatch: 3.1.2
       once: 1.4.0
       path-is-absolute: 1.0.1
+    dev: true
 
   /glob/7.2.3:
     resolution: {integrity: sha512-nFR0zLpU2YCaRxwoCJvL6UvCH2JFyFVIvwTLsIf21AuHlMskA1hhTdk+LlYJtOlYt9v6dvszD2BGRqBL+iQK9Q==}
@@ -5456,7 +5493,6 @@ packages:
     resolution: {integrity: sha512-ujppO+MkdPqoVINuDFDRLClm7D78qbDt0/NR+wp5FqEZOoTNAjPHWj17QRhu7geIHJfcNhRk1XVQmF8Bp3ye+g==}
     engines: {node: '>=10.13.0'}
     hasBin: true
-    dev: true
 
   /process-nextick-args/2.0.1:
     resolution: {integrity: sha512-3ouUOpQhtgrbOa17J7+uxOTpITYWaGP7/AhoR3+A+/1e9skrzelGi/dXzEYyvbxubEF6Wn2ypscTKiKJFFn1ag==}
@@ -5486,6 +5522,7 @@ packages:
     resolution: {integrity: sha512-N9iVG+CGJsI4b4ZGazjwLnxErD2d9Pe4DPvvXSxYA9tFNu8ymXME4Qs5HIQ0LMJpNM7zj+m0NlNnNeqFpKzqnA==}
     deprecated: Unmaintained
     dev: false
+    bundledDependencies: []
 
   /protocol-buffers-schema/3.6.0:
     resolution: {integrity: sha512-TdDRD+/QNdrCGCE7v8340QyuXd4kIWIgapsE2+n/SaGiSSbomYl4TjHlvIoCWRpE7wFt02EpB35VVA2ImcBVqw==}
@@ -5845,7 +5882,7 @@ packages:
     resolution: {integrity: sha512-uWjbaKIK3T1OSVptzX7Nl6PvQ3qAGtKEtVRjRuazjfL3Bx5eI409VZSqgND+4UNnmzLVdPj9FqFJNPqBZFve4w==}
     hasBin: true
     dependencies:
-      glob: 7.2.0
+      glob: 7.2.3
 
   /rimraf/3.0.2:
     resolution: {integrity: sha512-JZkJMZkAGFFPP2YqXZXPbMlMBgsxzE8ILs4lMIX/2o0L9UBw9O/Y3o6wFw/i9YLapcUJWwqbi3kdxIPdC62TIA==}
