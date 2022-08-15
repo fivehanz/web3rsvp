@@ -49,9 +49,7 @@ export default function CreateEvent() {
         await createEvent(responseJSON.cid);
       }
     } catch (error) {
-      alert(
-        `Oops! Something went wrong. Please refresh and try again. Error ${error}`
-      );
+      alert(`Oops! Something went wrong. Error ${error}`);
     }
     console.log("Form submitted");
   }
@@ -64,7 +62,7 @@ export default function CreateEvent() {
         let deposit = ethers.utils.parseEther(refund);
         let eventDateAndTime = new Date(`${eventDate} ${eventTime}`);
         let eventTimestamp = eventDateAndTime.getTime();
-        let eventCID = cid;
+        let eventDataCID = cid;
 
         const txn = await rsvpContract.createNewEvent(
           eventTimestamp,
@@ -326,7 +324,7 @@ export default function CreateEvent() {
         )}
 
         {success && eventId && (
-          <div>
+          <div className="py-12">
             Success! Please wait a few minutes, then check out your event page{" "}
             <span className="font-bold">
               <Link href={`/event/${eventId}`}>here</Link>

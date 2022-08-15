@@ -23,7 +23,7 @@ async function storeEventData(req, res) {
   } catch (err) {
     return res
       .status(500)
-      .json({ error: "Error creating event", success: false });
+      .json({ error: `Error creating event, Error: ${err}`, success: false });
   }
 }
 
