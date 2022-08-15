@@ -11,7 +11,7 @@ const MY_UPCOMING_EVENTS = gql`
       where: { eventOwner: $eventOwner, eventTimestamp_gt: $currentTimestamp }
     ) {
       id
-      eventID
+      eventId
       name
       description
       eventTimestamp

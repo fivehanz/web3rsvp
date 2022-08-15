@@ -46,7 +46,7 @@ export default function CreateEvent() {
       } else {
         console.log("Form successfully submitted!");
         let responseJSON = await response.json();
-        await CreateEvent(responseJSON.cid);
+        await createEvent(responseJSON.cid);
       }
     } catch (error) {
       alert(
@@ -325,11 +325,11 @@ export default function CreateEvent() {
           </section>
         )}
 
-        {success && eventID && (
+        {success && eventId && (
           <div>
             Success! Please wait a few minutes, then check out your event page{" "}
             <span className="font-bold">
-              <Link href={`/event/${eventID}`}>here</Link>
+              <Link href={`/event/${eventId}`}>here</Link>
             </span>
           </div>
         )}

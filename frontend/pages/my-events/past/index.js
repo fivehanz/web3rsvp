@@ -12,7 +12,7 @@ const MY_PAST_EVENTS = gql`
       where: { eventOwner: $eventOwner, eventTimestamp_lt: $currentTimestamp }
     ) {
       id
-      eventID
+      eventId
       name
       description
       eventTimestamp
